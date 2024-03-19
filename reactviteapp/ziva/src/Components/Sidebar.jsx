@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import 
 {BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
   BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
@@ -22,12 +23,12 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsFillArchiveFill className='icon'/> Products
+                  <Link to='/adminboatdetails'></Link>  <BsFillArchiveFill className='icon'/> Add Boat
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsFillGrid3X3GapFill className='icon'/> Categories
+                <Link to='/adminboatdetails'></Link>  <BsFillGrid3X3GapFill className='icon'/> Update Boat
                 </a>
             </li>
             <li className='sidebar-list-item'>
@@ -37,19 +38,15 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsListCheck className='icon'/> Inventory
+                    <BsListCheck className='icon'/> Payment
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsMenuButtonWideFill className='icon'/> Reports
+                    <BsMenuButtonWideFill className='icon'/> View Booking
                 </a>
             </li>
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <BsFillGearFill className='icon'/> Setting
-                </a>
-            </li>
+            
         </ul>
     </aside>
   )

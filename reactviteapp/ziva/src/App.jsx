@@ -16,6 +16,8 @@ import ContactUs from './Components/ContactUs'
 import Sidebar from './Components/Sidebar'
 import Footer from './Components/Footer'
 import Register from './Components/Register'
+import La from './Components/Loginas'
+import Logina from './Components/Logina'
 
 
 
@@ -37,6 +39,9 @@ function App() {
     <Route path='/contact' element={<ContactUs/>}></Route>
     <Route path='/footer' element={<Footer/>}></Route>
     <Route path='/register' element={<Register/>}></Route>
+    <Route path='/loginas' element={<La/>}></Route>
+    <Route path='/logina' element={<Logina/>}></Route>
+    
     </Routes></BrowserRouter>
     </div>
   )
