@@ -1,8 +1,6 @@
-.pricestartcard{
-    width: 420px;
-    background: rgb(209, 202, 200);
-    color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
-  
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
+  
