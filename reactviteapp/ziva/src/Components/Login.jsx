@@ -4,15 +4,15 @@ import { FaUser ,FaLock} from "react-icons/fa";
 
 import { Link } from 'react-router-dom';
 import Header from './Header';
-
+import bgg from '../assets/allbg.jpg'
 
 
 
 const SimpleLoginForm = () => {
   
   return (
-   
-   <div className='wrapper'>
+   <div style={{backgroundImage: `url(${bgg})`}}>
+   <div className='wrapper'  >
    <form action=''>
    <h1> Login</h1>
       <div className='input-box'>
@@ -34,7 +34,7 @@ const SimpleLoginForm = () => {
    </div>
    </form>
    </div>
-   
+   </div>
   
   );
 };
