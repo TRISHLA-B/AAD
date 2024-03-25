@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className='pricestartcard'>
       <Header/>
-      <img src={images[currentImageIndex]} style={{ width: '700px', height: '450px',marginLeft: '-500px',marginTop:'100px',borderRadius:'10px' }}  alt=''/>
+      <img src={images[currentImageIndex]} style={{ position: 'absolute',width: '700px', height: '440px',marginLeft: '-580px',marginTop:'-780px',borderRadius:'10px' }}  alt=''/>
       <div style={{ position: 'absolute', top: '135px', left: '80%', transform: 'translateX(-50%)', backgroundColor: '#00203FFF', padding: '224px', borderRadius: '5px' }}>
      
       </div>

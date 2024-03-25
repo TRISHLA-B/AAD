@@ -8,7 +8,7 @@ const Userbook = () => {
   return (
   
    
-    <div className='bookwrap'>
+    <div className='bookwrap' style={{backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQAvkLQF8Ki5IbnQF-yUJjbKz0Bl0vVXmGWM36KFVtCYdVMxa4MmZBwT1q32KQiBehog&usqp=CAU')",backgroundSize: 'cover',backgroundPosition:'center',minHeight:'100vh'}}>
     <Header/>
     <form action=''>
     <h1> Booking Details</h1>

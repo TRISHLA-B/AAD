@@ -12,8 +12,8 @@ import Header from './Header';
 
 const Adminboatdetails = () => {
   return (
-    <div className='bg' >
-      <div className='adminwrapper ' style={{backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQAvkLQF8Ki5IbnQF-yUJjbKz0Bl0vVXmGWM36KFVtCYdVMxa4MmZBwT1q32KQiBehog&usqp=CAU')",backgroundSize: 'cover',backgroundPosition:'center',minHeight:'100vh'}}>
+    <div className='bg'  >
+      <div className='adminwrapper ' >
         <Header />
         <form action=''>
           <h1>ADD BOAT DETAILS</h1>

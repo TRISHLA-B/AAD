@@ -1,9 +1,13 @@
-package com.example.zivabackend;
+package com.example.zivabackend.Repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BoatdetailRepo extends JpaRepository<BoatdetailModel,Integer> {
-    
-        
-    }
+import com.example.zivabackend.Model.BoatdetailModel;
 
+
+public interface BoatdetailRepo extends JpaRepository<BoatdetailModel,Integer> {
+
+    
+
+    
+} 

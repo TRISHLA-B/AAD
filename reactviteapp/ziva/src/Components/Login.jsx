@@ -11,8 +11,8 @@ import bgg from '../assets/allbg.jpg'
 const SimpleLoginForm = () => {
   
   return (
-   <div style={{backgroundImage: `url(${bgg})`}}>
-   <div className='wrapper'  >
+   
+   <div className='wrapper' style={{backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQAvkLQF8Ki5IbnQF-yUJjbKz0Bl0vVXmGWM36KFVtCYdVMxa4MmZBwT1q32KQiBehog&usqp=CAU')",backgroundSize: 'cover',backgroundPosition:'center',minHeight:'50vh'}} >
    <form action=''>
    <h1> Login</h1>
       <div className='input-box'>
@@ -34,7 +34,7 @@ const SimpleLoginForm = () => {
    </div>
    </form>
    </div>
-   </div>
+ 
   
   );
 };

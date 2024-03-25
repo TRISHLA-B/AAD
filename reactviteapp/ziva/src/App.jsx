@@ -18,7 +18,7 @@ import Footer from './Components/Footer'
 import Register from './Components/Register'
 import La from './Components/Loginas'
 import Logina from './Components/Logina'
-
+import Payment from './Components/Payment'
 
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
     <Route path='/register' element={<Register/>}></Route>
     <Route path='/loginas' element={<La/>}></Route>
     <Route path='/logina' element={<Logina/>}></Route>
-    
+    <Route path='/payment' element={<Payment/>}></Route>
     </Routes></BrowserRouter>
     </div>
   )
