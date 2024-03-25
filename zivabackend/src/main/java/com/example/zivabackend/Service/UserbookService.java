@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 
 
 import com.example.zivabackend.Model.Userbook;
-import com.example.zivabackend.Repo.UserbookRepo;
+import com.example.zivabackend.Repository.UserbookRepo;
 
 @Service
 public class UserbookService {
     @Autowired
     public UserbookRepo userbookrepo;
-    public Userbook createuserbook(Userbook bookinginfo)
+    public Userbook createuserbook(Userbook bookinginfo)                                         
     {
         return userbookrepo.save(bookinginfo);
     } 
@@ -38,7 +38,7 @@ public class UserbookService {
            
             return userbookrepo.save(existingUser);  
         } else {
-            return null; 
+            return null;
         }
     }
        public Userbook getuserbookbyid(int id)

@@ -1,4 +1,4 @@
-package com.example.zivabackend.Repo;
+package com.example.zivabackend.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

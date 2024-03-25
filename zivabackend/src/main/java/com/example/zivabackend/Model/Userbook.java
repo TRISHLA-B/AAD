@@ -25,8 +25,5 @@ public class Userbook {
     private int noofpersons;
     private Date fromdate;
     private Date todate; 
-
-    
-
-    
 }
+

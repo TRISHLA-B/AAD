@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.zivabackend.Model.BoatdetailModel;
-import com.example.zivabackend.Repo.BoatdetailRepo;
+import com.example.zivabackend.Repository.BoatdetailRepo;
 
 @Service
 public class BoatdetailService {

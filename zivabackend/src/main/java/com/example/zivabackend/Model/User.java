@@ -1,6 +1,5 @@
 package com.example.zivabackend.Model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,17 +10,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name ="userdetail")
+@Table(name = "users_table")
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 public class User {
-   @Id
-   @GeneratedValue(strategy=GenerationType.IDENTITY)
-   private long id;
-   private String name;
-   private String email;
-   private String password;
-   
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+    private String email;
+    private String phone;
+    private String password;
+    private String roles;
 }

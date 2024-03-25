@@ -6,6 +6,7 @@ import com.example.zivabackend.Model.BoatdetailModel;
 import com.example.zivabackend.Service.BoatdetailService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,21 +25,27 @@ public class BoatdetailController {
     @Autowired
     public BoatdetailService boatdetailService;
     @GetMapping 
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<BoatdetailModel> getboatdetail()
     {
            return boatdetailService.getboatdetail();
     }
+
+   
     @PostMapping 
+    @PreAuthorize("hasAuthority('ADMIN')")
     public BoatdetailModel createboatdetail (@RequestBody BoatdetailModel info)
     {
-             return boatdetailService.createboatdetail(info);
+           return boatdetailService.createboatdetail(info);
     }
     @PutMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public BoatdetailModel updatebd(@PathVariable int id ,@RequestBody BoatdetailModel infom)
     {
         return  boatdetailService.updatebd(id, infom);
     }
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
      public void deleteboatdetail(@PathVariable int id)
      {
         boatdetailService.deleteboatdetail(id);
@@ -46,3 +53,4 @@ public class BoatdetailController {
 
     
 }
+

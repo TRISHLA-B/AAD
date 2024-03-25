@@ -1,22 +1,72 @@
 package com.example.zivabackend.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.example.zivabackend.Dto.UpdateRequest;
 import com.example.zivabackend.Model.User;
-import com.example.zivabackend.Repo.UserRepo;
+
+import io.micrometer.common.lang.NonNull;
+import com.example.zivabackend.Repository.UserRepository;
+
 @Service
 public class UserService {
-    @Autowired
-    private UserRepo userrepo;
-    public User createuser(User userinfo)
-    {
-        return userrepo.save(userinfo);
-    }
-    public List<User> getAllUsers() {
-        return userrepo.findAll();
-    }	
-   
     
+    @Autowired 
+    private UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    public List<User> getAllUsers()
+    {
+        return userRepository.findAll();
+    }
+
+    public Optional<User> getUserByEmail(String email)
+    {
+        return userRepository.findByEmail(email);
+    }
+
+    public Optional<User> getUserById(Integer userId)
+    {
+        return userRepository.findById(userId);
+    }
+
+    public User createUser(User user)
+    {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return userRepository.save(user);
+    }
+
+    public User updateUser(String email, UpdateRequest updateRequest)
+    {
+        return userRepository.findByEmail(email)
+                .map(oldUser -> {
+                    oldUser.setName(updateRequest.getName());
+                    oldUser.setEmail(updateRequest.getEmail());
+                    oldUser.setPassword(passwordEncoder.encode(updateRequest.getPassword()));
+                    return userRepository.save(oldUser);
+                })
+                .orElseThrow(() -> new RuntimeException("User not found with this email: " + email));
+    }
+
+    public void deleteAllUsers()
+    {
+        userRepository.deleteAll();
+    }
+    
+    public void deleteUser(@NonNull Integer userId)
+    {
+        if(userRepository.existsById(userId))
+            userRepository.deleteById(userId);
+    }
+
+    
+
+
 }
